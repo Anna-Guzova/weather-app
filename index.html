@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="search visibility">
+        <input
+          class="search__input visibility"
+          id="cityInput"
+          type="text"
+          placeholder="Search City"
+        />
+        <button class="seach-button" id="getWeatherBtn">
+          <svg width="20" height="20">
+            <use href="./image/sprite.svg#icon-search"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="information">
+        <div class="base visibility">
+          <div class="base_first">
+            <p class="country">
+              <svg class="icon-country" width="24" height="24">
+                <use href="./image/sprite.svg#icon-location2"></use>
+              </svg>
+              <span id="cityName"></span>
+            </p>
+            <p id="time">8:14 AM</p>
+          </div>
+          <div class="base_second">
+            <p id="temp" class="temp">26</p>
+            <p>The temperature feels like <span id="feel"></span></p>
+          </div>
+          <p>More information: <span id="description"> </span></p>
+        </div>
+        <div class="additional visibility">
+          <h2>Sunrise</h2>
+          <svg class="icon" width="100" height="100">
+            <use href="./image/sprite.svg#icon-sunrise"></use>
+          </svg>
+          <p class="time" id="sunrise">Time</p>
+        </div>
+        <div class="additional visibility">
+          <h2>Sunset</h2>
+          <svg class="icon" width="100" height="100">
+            <use href="./image/sprite.svg#icon-sunset"></use>
+          </svg>
+          <p class="time" id="sunset">Time</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 class="title">Overview</h2>
+
+      <div class="overview">
+        <div class="overview_block visibility">
+          <h3>Humidity</h3>
+          <svg class="icon" width="100" height="100">
+            <use href="./image/sprite.svg#icon-cloud-raindrops"></use>
+          </svg>
+          <p id="humidity">Humidity</p>
+        </div>
+        <div class="overview_block visibility">
+          <h3>Wind speed</h3>
+          <svg class="icon" width="100" height="100">
+            <use href="./image/sprite.svg#icon-cloud-wind"></use>
+          </svg>
+          <p id="wind"></p>
+        </div>
+        <div class="overview_block visibility">
+          <h3>Visibility</h3>
+          <svg class="icon" width="100" height="100">
+            <use href="./image/sprite.svg#icon-cloud-fog"></use>
+          </svg>
+          <p id="visibility">Visibility</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
